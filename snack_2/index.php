@@ -1,19 +1,19 @@
 <?php
 
-        // Verifica se i parametri GET sono stati inviati
-        if(isset($_GET['name']) && isset($_GET['mail']) && isset($_GET['age'])) {
-            // Ottieni i valori dei parametri GET
-            $name = $_GET['name'];
-            $mail = $_GET['mail'];
-            $age = $_GET['age'];
+    // Verifica se i parametri GET sono stati inviati
+    if(isset($_GET['name']) && isset($_GET['mail']) && isset($_GET['age'])) {
+        // Ottieni i valori dei parametri GET
+        $name = $_GET['name'];
+        $mail = $_GET['mail'];
+        $age = $_GET['age'];
 
-            // Verifica le condizioni richieste
-            if(strlen($name) > 3 && strpos($mail, '@') !== false && strpos($mail, '.') !== false && is_numeric($age)) {
-                echo "Accesso riuscito";
-            }else{
-                echo "Accesso negato";
-            }
+        // Verifica le condizioni richieste
+        if(strlen($name) > 3 && strpos($mail, '@') !== false && strpos($mail, '.') !== false && is_numeric($age)) {
+            echo "Accesso riuscito";
+        }else{
+            echo "Accesso negato";
         }
+    }
 
 ?>
 
